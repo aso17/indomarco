@@ -32,6 +32,7 @@
             <div class="card ">
                 <div class="card-header font-weight-bold ">
                     <h5> Cetak Laporan Fisik Dari Toko tidak Ada</h5>
+
                 </div>
                 <div class=" card mt-3 shadow ">
                     <form method="post" action="<?= base_url('Laporan/cetak_tgl') ?>">

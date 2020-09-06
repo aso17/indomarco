@@ -31,13 +31,27 @@
         <div class="col mt-md-3 bg-white  mr-3 ml-5 border-top-0 border-bottom-0">
             <div class="card shadow">
                 <div class="card">
-                    <div class="card-header">
-                        <h5 class="">PT.INDOMARCO PRISMATAMA</h5>
-                        <P>G026-Tangerang 1</P>
-                        <a href="<?= base_url('Laporan/cetak_pdf/') . $tgl1 . '/' . $tgl2 ?>" target="_blank">
-                            <botton class=" btn btn-outline-secondary fa fas-print  text-dark float-right "><i class="fas fa-file-pdf"></i>Cetak PDF </botton>
-                        </a>
+                    <div class="card-header pt-3">
+                        <h5 class="font-weight-bold">PT.INDOMARCO PRISMATAMA</h5>
+                        <P class="font-weight-bold">G026-Tangerang 1</P>
+
+
+
+
+
+
                         <h5 class="text-center">Laporan Fisik Tidak Ada</h5>
+                        <h5 class="text-center"><?= date('l,d/m/y'); ?></h5>
+
+                        <div class="d-flex justify-content-center mt-3 ">
+                            <button class="btn btn-outline-danger btn-sm dropdown-toggle font-weight-bold" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cetak</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item text-dark" href="<?= base_url('Laporan/cetak_pdf/') . $tgl1 . '/' . $tgl2 ?>" target="_blank"><i class="fas fa-file-pdf"></i>cetak pdf</a>
+                                <a class="dropdown-item text-success" href="<?= base_url('Laporan/cetak_excel/') . $tgl1 . '/' . $tgl2 ?>"><i class="fas fa-file-excel"></i>Cetak Exel</a>
+                            </div>
+                        </div>
+                        <h6 class="float-right font-wight-normal">User : <?= $this->session->userdata('nik') ?></h6>
+                        <br>
                         <div class="col-md-3  mx-auto mt-3">
 
 
